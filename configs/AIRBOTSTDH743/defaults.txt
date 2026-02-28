@@ -1,0 +1,88 @@
+# AIRBOTSTDH743 Betaflight CLI Config Template
+# Dual Gyro (IIM42652/ICM42688P) + LPS22H Baro + MAX7456 OSD
+# Apply via Betaflight Configurator CLI tab: paste all, then "save"
+
+# --- Board & System ---
+board_name AIRBOTSTDH743
+manufacturer_id ARBT
+
+# --- Gyro & ACC ---
+set gyro_to_use = BOTH
+set gyro_1_sensor_align = CW0
+set gyro_2_sensor_align = CW0
+set gyro_1_align_yaw = 0
+set gyro_2_align_yaw = 0
+
+# --- Motor Protocol ---
+set motor_pwm_protocol = DSHOT600
+set dshot_bidir = ON
+set motor_poles = 14
+
+# --- Serial Ports ---
+# UART1: ESC Telemetry (safe from DFU hijack with ESC)
+# UART2: CRSF receiver (recommended)
+# UART3: GPS
+# UART4: spare
+# UART5: MSP DisplayPort (DJI/HDZero VTX)
+# UART6: spare
+# UART7: spare
+# UART8: spare
+serial 0 1024 115200 57600 0 115200    # UART1 - ESC Telemetry
+serial 1 64 115200 57600 0 115200      # UART2 - CRSF RX
+serial 2 2 115200 57600 0 115200       # UART3 - GPS
+serial 3 0 115200 57600 0 115200       # UART4 - unused
+serial 4 4096 115200 57600 0 115200    # UART5 - MSP DisplayPort
+serial 5 0 115200 57600 0 115200       # UART6 - unused
+serial 6 0 115200 57600 0 115200       # UART7 - unused
+serial 7 0 115200 57600 0 115200       # UART8 - unused
+
+# --- Receiver ---
+set serialrx_provider = CRSF
+set serialrx_uart = SERIAL_PORT_USART2
+
+# --- Battery & Current ---
+set vbat_scale = 110
+set ibata_scale = 250
+set vbat_divider = 10
+set vbat_multiplier = 1
+set battery_meter = ADC
+set current_meter = ADC
+set vbat_min_cell_voltage = 330
+set vbat_warning_cell_voltage = 350
+set vbat_max_cell_voltage = 430
+
+# --- Blackbox ---
+set blackbox_device = SPIFLASH
+
+# --- Barometer ---
+set baro_hardware = LPS22H
+set baro_i2c_device = 1
+
+# --- OSD ---
+set osd_displayport_device = MAX7456
+
+# --- Beeper ---
+set beeper_inversion = ON
+
+# --- Filters (conservative defaults) ---
+set gyro_lpf1_static_hz = 0
+set gyro_lpf1_dyn_min_hz = 250
+set gyro_lpf1_dyn_max_hz = 500
+set gyro_lpf2_static_hz = 0
+set dterm_lpf1_static_hz = 0
+set dterm_lpf1_dyn_min_hz = 75
+set dterm_lpf1_dyn_max_hz = 150
+set dterm_lpf2_static_hz = 0
+
+# --- PID ---
+set simplified_master_multiplier = 100
+set simplified_i_gain = 100
+set simplified_d_gain = 100
+set simplified_pi_gain = 100
+set simplified_dmax_gain = 100
+set simplified_feedforward_gain = 100
+
+# --- PINIO ---
+set pinio_box = 40,41,255,255
+
+save

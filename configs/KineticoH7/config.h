@@ -101,6 +101,10 @@
 #define USE_GYRO_CLKIN
 #define GYRO_1_CLKIN_PIN PD15
 
+#define PINIO1_PIN       PD4
+#define PINIO1_BOX       40
+#define PINIO1_CONFIG    129
+
 #define TIMER_PIN_MAPPING \
     TIMER_PIN_MAP( 0, PA0 , 2,  2) \
     TIMER_PIN_MAP( 1, PA1 , 2,  3) \
