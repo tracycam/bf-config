@@ -18,6 +18,12 @@
  *
  * If not, see <http://www.gnu.org/licenses/>.
  */
+ 
+/*
+SUPPORTED TARGET - THANK YOU
+REFERENCE: sha256_92fef4e6502dcf4ba2bbf9469e0e7b3ad3b3a820bcf2635c2fb5f2216819bb21
+DATE: 2025-12-01
+*/
 
 #pragma once
 
@@ -28,8 +34,11 @@
 
 #define USE_ACC
 #define USE_GYRO
+#define USE_ACCGYRO_BMI270
+#define USE_ACCGYRO_ICM42622P
 #define USE_ACC_SPI_ICM42688P
 #define USE_GYRO_SPI_ICM42688P
+#define USE_ACCGYRO_LSM6DSK320X
 #define USE_FLASH
 #define USE_FLASH_M25P16
 #define USE_MAX7456
