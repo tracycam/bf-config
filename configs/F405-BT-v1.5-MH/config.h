@@ -27,8 +27,9 @@
 #define MANUFACTURER_ID ABCD
 
 // MH2425 兼容芯片补丁
-#define MH2425_COMPAT_PATCH
-#define USE_ADC_INTERRUPT
+// #define MH2425_COMPAT_PATCH_ADC_INT  // temporarily disabled for isolated DSHOT_DMA test
+#define MH2425_COMPAT_PATCH_DSHOT_DMA
+#define USE_CCM_CODE
 
 #define USE_ACC
 #define USE_ACC_SPI_ICM42688P
