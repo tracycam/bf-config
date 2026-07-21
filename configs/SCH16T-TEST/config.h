@@ -140,7 +140,6 @@
 //  0-7: motors (DSHOT)
 //  8-11: servos (TIM4, standard PWM)
 //  12: LED strip
-//  13: PE5: IMUCLK timer kept for reference; SCH16T uses PE5 as gyro EXTI (DRY)
 #define TIMER_PIN_MAPPING \
     TIMER_PIN_MAP( 0, PA0,  2,  0) \
     TIMER_PIN_MAP( 1, PA1,  2,  1) \
@@ -154,8 +153,7 @@
     TIMER_PIN_MAP( 9, PD13, 1, -1) \
     TIMER_PIN_MAP(10, PD14, 1, -1) \
     TIMER_PIN_MAP(11, PD15, 1, -1) \
-    TIMER_PIN_MAP(12, PA8,  1,  8) \
-    TIMER_PIN_MAP(13, PE5,  1, -1)
+    TIMER_PIN_MAP(12, PA8,  1,  8)
 
 // DMA options
 #define ADC1_DMA_OPT         9
