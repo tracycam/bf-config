@@ -118,7 +118,7 @@
 
 // Gyro 1 - SPI1, CS/EXTI/RST for SCH16T-K10
 #define GYRO_1_CS_PIN        PA4
-#define GYRO_1_EXTI_PIN      PE5
+#define GYRO_1_EXTI_PIN      PB3
 #define GYRO_1_RST_PIN       PE9
 
 // OSD - SPI2, CS adjacent [pin 51]
