@@ -30,7 +30,7 @@
 #define USE_GYRO
 #define USE_ACCGYRO_SCH16T
 #define USE_BARO
-#define USE_BARO_LPS22H
+#define USE_BARO_DPS310
 #define USE_FLASH
 #define USE_FLASH_W25N01G
 #define USE_FLASH_W25Q128FV
