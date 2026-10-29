@@ -24,15 +24,13 @@
 
 #define USE_GYRO
 #define USE_ACC
-#define USE_GYRO_SPI_ICM42688P
-#define USE_ACC_SPI_ICM42688P
+#define USE_ACCGYRO_ICM40608
 #define GYRO_1_SPI_INSTANCE     SPI3
 #define GYRO_1_CS_PIN           PF3
 #define GYRO_1_EXTI_PIN         PA15
 /* Mounting alignment must be checked against the board's forward direction. */
 
-/* IMU CLKIN is wired to PC9. Use the internal clock until an independent
- * timer source can be assigned without sharing TIM8 with the motors. */
+/* PC9 is connected to the IMU's INT2/FSYNC pin and is not used. */
 #define SPI3_SCK_PIN            PC10
 #define SPI3_SDI_PIN            PC11
 #define SPI3_SDO_PIN            PC12
